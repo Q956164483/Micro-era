@@ -1,0 +1,203 @@
+@import "reset";
+@import "mixins";
+@import "color";
+.clearfix:after{
+  content: ".";     /**//*内容为“.”就是一个英文的句号而已。也可以不写。*/
+  display: block;   /**//*加入的这个元素转换为块级元素。*/
+  clear: both;     /**//*清除左右两边浮动。*/
+  visibility: hidden;      /**//*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+  line-height: 0;    /**//*行高为0；*/
+  height: 0;     /**//*高度为0；*/
+  font-size:0;    /**//*字体大小为0；*/
+}
+.clearfix{ *zoom:1;}   /**//*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+
+html{
+  color:#FFF;
+}
+a{
+  text-decoration: none;
+  color:#FFF;
+}
+/*头部*/
+.top-bg{
+  width:100%;
+  height:115px;
+  background-color: $color-top;
+  .top{
+  	width:1200px;
+  	margin:0 auto;
+  	.logo{
+        margin-top:5px;
+        width:280px;
+        height:106px;
+  		background-image:url("../images/logo.png");
+        float:left;
+  	}
+    .right{
+      float:right;
+      width:340px;
+      .line{
+        margin-top:20px;
+        .icon{
+          width:21px;
+          height:21px;
+          float:left;
+        }
+        .text{
+          padding-left: 9px;
+          height:21px;
+          line-height: 21px;
+          color:#FFF;
+          font-size:18px;
+          float:left;
+        }
+      }
+      .line1{
+        @extend .clearfix;
+        .icon{
+          background-image: url("../images/time.png");
+        }
+      }
+      .line2{
+        .icon{
+          background-image: url("../images/call.png");
+        }
+      }
+    }
+  }
+}
+.top-banner{
+  width:100%;
+  @include bcImg();
+  &.top-banner1{
+    height:634px;
+    background-image: url("../images/banner1.png");
+  }
+  &.top-banner2{
+    height:166px;
+    background-image: url("../images/banner2.png");
+  }
+}
+.nav-bg{
+  $navHeight:67px;
+  width:100%;
+  height:$navHeight;
+  background-color: $color-nav;
+  .nav{
+    margin:0 auto;
+    width:1200px;
+    height:$navHeight;
+    font-size:22px;
+    text-align: center;
+    .left{
+      position: relative;
+      height:$navHeight;
+      line-height:$navHeight;
+      float: left;
+      width:265px;
+      color:#FFF;
+      background-color: $color-nav-act;
+      .arrow-bot{
+        position:absolute;
+        left:0;
+        bottom:-20px;
+        width:24px;
+        height:21px;
+        background-image: url("../images/arrow-bot.png");
+      }
+    }
+    .right{
+      float: right;
+      list-style-type: none;
+      height:$navHeight;
+      width:750px;
+      margin:0;
+      .nav-item{
+        float: left;
+        width:150px;
+        color:#a42a43;
+        height:$navHeight;
+        line-height:$navHeight;
+        font-size:22px;
+        transition:all .5s;
+        &.act,&:hover{
+          background-color: $color-nav-act;
+          font-size:24px;
+          color:#FFF;
+        }
+      }
+    }
+  }
+}
+.servive-bg{
+  width:100%;
+  height:210px;
+  margin-top:18px;
+  background-color: $color-top;
+  .service{
+    width:1200px;
+    margin:0 auto;
+    height:100%;
+    .left{
+      width:115px;
+      height:100%;
+      list-style: none;
+      float:left;
+      margin:0;
+      border-right:1px solid #85d2e8;
+      .item{
+        display: block;
+        width:100%;
+        height:50px;
+        line-height:50px;
+        font-size:20px;
+        text-align: center;
+        border-bottom:2px solid $color-top;
+        &.act,&:hover{
+          border-bottom:2px solid $color-nav;
+        }
+      }
+    }
+    .right{
+      float:right;
+      list-style: none;
+      padding-top:50px;
+      padding-bottom:50px;
+      position:relative;
+      .more{
+        position:absolute;
+        bottom:10px;
+        right:0;
+        width:60px;;
+        font-size:14px;
+      }
+      .item{
+        width:153px;
+        height:110px;
+        border-right:1px solid #85d2e8;
+        border-left:1px solid #4d8fa2;
+        float:left;
+        .icon{
+          width:80px;
+          height:80px;
+          margin:0 auto;
+        }
+        .text{
+          height:30px;
+          line-height:30px;
+          font-size:18px;
+          text-align:center;
+        }
+        @for $i from 1 to 8{
+          .icon-service#{$i}{
+            background-image: url("../images/icon-service#{$i}.png");
+          }
+        }
+      }
+    }
+  }
+}
+/*尾部*/
+
+
