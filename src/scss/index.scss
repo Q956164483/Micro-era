@@ -1,0 +1,84 @@
+@import "common";
+.container{
+	width:1200px;
+	margin:0 auto;
+	.item{
+		float:left;
+		.title{
+			$color-title:#a42a43;
+			height:47px;
+			.left{
+				border-bottom:3px solid $color-title;
+			}
+			div{
+				font-size:26px;
+				line-height:47px;
+				float:left;
+			}
+			color:$color-title;
+		}
+		.content{
+			margin-top:15px;
+			width:100%;
+			height:243px;
+		}
+	}
+	.item-left{
+		width:356px;
+	}
+	.item-center{
+		width:458px;
+		margin-left:25px;
+		margin-right:25px;
+	}
+	.item-right{
+		width:336px;
+	}
+	.about{
+		.content{
+			background-color: #000;
+		}
+	}
+	.cases{
+		.content{
+			height:447px;
+			.slider{
+				height:265px;
+				width:100%;
+				background-image: url("../images/case.png");
+				@include bcImg();
+			}
+			.cases{
+				height:182px;
+				margin:0;
+				.item{
+					float:left;
+					width:48%;
+					height:48%;
+					margin:1%;
+					height:100px;
+					background-image: url("../images/case.png");
+					@include bcImg();
+				}
+			}
+		}
+	}
+	.news{
+		.content{
+			.img-txt{
+				width:100%;
+				.img{
+
+				}
+				.txt{
+
+				}
+			}
+			.txt{
+				.item{
+
+				}
+			}
+		}
+	}
+}
