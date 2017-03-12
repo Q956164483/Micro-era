@@ -1,11 +1,10 @@
 /*!
  * gulp
- * $ cnpm install gulp gulp-sass  gulp-autoprefixer gulp-minify-css gulp-htmlmin gulp.spritesmith gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename browser-sync gulp-cache --save-dev
+ * $ cnpm install gulp gulp-sass  gulp-autoprefixer gulp-minify-css gulp-htmlmin gulp.spritesmith gulp-jshint gulp-concat gulp-order gulp-uglify gulp-imagemin gulp-notify gulp-rename browser-sync gulp-cache --save-dev
  */
 // 加载各个模块
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    //less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     spritesmith = require('gulp.spritesmith'),
@@ -14,6 +13,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     htmlmin = require('gulp-htmlmin');
     rename = require('gulp-rename'),
+    order = require('gulp-order'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
@@ -21,7 +21,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 // sass编译
 gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss','!src/scss/common.scss','!src/scss/mixins.scss','!src/scss/reset.scss','!src/scss/color.scss'])
+    return gulp.src(['src/scss/*.scss','!src/scss/common.scss'])
         .pipe(sass())
         .pipe(gulp.dest('src/css'))
         //.pipe(notify({ message: 'sass编译完成' }));
@@ -61,10 +61,14 @@ gulp.task('css',['sass'], function() {
 });
 // js合并压缩
 gulp.task('js', function() {
-    return gulp.src(['src/js/*.js','!src/js/all.js'])
+    return gulp.src(['src/js/*.js'])
+            .pipe(order([
+                "jquery.js",
+                "*.js",
+            ]))
             //.pipe(jshint())
             //.pipe(jshint.reporter('default'))
-            //.pipe(concat('all.js'))
+            .pipe(concat('concat.js'))
             //.pipe(rename({ suffix: '.min' }))
             //.pipe(uglify())
             .pipe(gulp.dest('dist/js'))
@@ -73,14 +77,14 @@ gulp.task('js', function() {
 });
 gulp.task('html',function(){
     var options = {
-        collapseWhitespace:true,
-        collapseBooleanAttributes:true,
-        removeComments:true,
-        removeEmptyAttributes:true,
-        removeScriptTypeAttributes:true,
-        removeStyleLinkTypeAttributes:true,
-        minifyJS:true,
-        minifyCSS:true
+        // collapseWhitespace:true,
+        // collapseBooleanAttributes:true,
+        // removeComments:true,
+        // removeEmptyAttributes:true,
+        // removeScriptTypeAttributes:true,
+        // removeStyleLinkTypeAttributes:true,
+        // minifyJS:true,
+        // minifyCSS:true
     };
     gulp.src('src/*.html')
         .pipe(htmlmin(options))

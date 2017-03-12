@@ -1253,6 +1253,9 @@ button.swiper-pagination-bullet {
     width: 336px; }
   .container .about .content {
     background-color: #000; }
+    .container .about .content video {
+      width: 100%;
+      height: 100%; }
   .container .cases .content {
     height: 447px; }
     .container .cases .content .slider {
