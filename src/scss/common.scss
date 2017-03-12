@@ -1,6 +1,6 @@
-@import "reset";
-@import "mixins";
-@import "color";
+@import "common/reset";
+@import "common/mixins";
+@import "common/color";
 .clearfix:after{
   content: ".";     /**//*内容为“.”就是一个英文的句号而已。也可以不写。*/
   display: block;   /**//*加入的这个元素转换为块级元素。*/
@@ -12,12 +12,20 @@
 }
 .clearfix{ *zoom:1;}   /**//*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
 
-html{
+html,body{
   color:#FFF;
+  min-width:1200px;
 }
 a{
   text-decoration: none;
   color:#FFF;
+}
+.hide{
+  display:none;
+}
+.header{
+  width:100%;
+  height:auto;
 }
 /*头部*/
 .top-bg{
@@ -27,11 +35,12 @@ a{
   .top{
   	width:1200px;
   	margin:0 auto;
+    height:auto;
   	.logo{
         margin-top:5px;
         width:280px;
         height:106px;
-  		background-image:url("../images/logo.png");
+  		  background-image:url("../images/logo.png");
         float:left;
   	}
     .right{
@@ -72,11 +81,9 @@ a{
   @include bcImg();
   &.top-banner1{
     height:634px;
-    background-image: url("../images/banner1.png");
   }
   &.top-banner2{
     height:166px;
-    background-image: url("../images/banner2.png");
   }
 }
 .nav-bg{
@@ -122,7 +129,7 @@ a{
         font-size:22px;
         transition:all .5s;
         &.act,&:hover{
-          background-color: $color-nav-act;
+          //background-color: $color-nav-act;
           font-size:24px;
           color:#FFF;
         }
@@ -161,43 +168,177 @@ a{
     }
     .right{
       float:right;
-      list-style: none;
-      padding-top:50px;
-      padding-bottom:50px;
-      position:relative;
-      .more{
-        position:absolute;
-        bottom:10px;
-        right:0;
-        width:60px;;
-        font-size:14px;
-      }
-      .item{
-        width:153px;
+      .right-item{
         height:110px;
-        border-right:1px solid #85d2e8;
-        border-left:1px solid #4d8fa2;
-        float:left;
-        .icon{
-          width:80px;
-          height:80px;
-          margin:0 auto;
+        padding-top:50px;
+        padding-bottom:50px;
+        position:relative;
+        .more{
+          position:absolute;
+          bottom:10px;
+          right:0;
+          width:60px;;
+          font-size:14px;
         }
-        .text{
-          height:30px;
-          line-height:30px;
-          font-size:18px;
-          text-align:center;
-        }
-        @for $i from 1 to 8{
-          .icon-service#{$i}{
-            background-image: url("../images/icon-service#{$i}.png");
+        .item{
+          width:153px;
+          height:110px;
+          border-right:1px solid #85d2e8;
+          //border-left:1px solid #4d8fa2;
+          float:left;
+          .icon{
+            width:80px;
+            height:80px;
+            margin:0 auto;
           }
+          .text{
+            height:30px;
+            line-height:30px;
+            font-size:18px;
+            text-align:center;
+          }
+          
         }
       }
     }
   }
 }
 /*尾部*/
+.service-process,.welcome{
+  width:100%;
+  @extend .clearfix;
+  @include bcImg();
+  clear:both;
+}
 
+.service-process{
+  position:relative;
+  height:419px;
+  background-image: url("../images/service-process.png");
+  .more{
+    border:2px solid;
+    width:100px;
+    font-size:22px;
+    padding:5px;
+    border-radius:27px;
+    position:absolute;
+    text-align:center;
+    left:50%;
+    margin-left:-50px;
+    bottom:20px;
+    &:hover{
+      color:#f394aa;
+    }
+  }
+}
+.welcome{
+  height:110px;
+  background-image: url("../images/welcome.png");
+}
+.zanshi-bg{
+  width:100%;
+  margin-top:30px;
+  @extend .clearfix;
+  .zanshi{
+    margin:0 auto;
+    width:1200px;
+    .item{
+      width:590px;
+      .title{
+          background-color:$color-nav-act;
+          height:72px;
+          line-height:72px;
+          text-align:center;
+          font-size:26px;
+      }
+      .content{
+        width:100%;
+        height:200px;
+        margin-top:20px;
+        .item{
+          width:48%;
+          height:180px;
+          float:left;
+          margin:10px 1%;
+        }
+      }
+    }
+    .left{
+      .title{
 
+      }
+      float:left;
+    }
+    .right{
+      float:right;
+      .title{
+        background-color:$color-nav;
+      }
+    }
+  }
+}
+.bot-logo{
+  width:100%;
+  height:106px;
+  background-color:#f394aa;
+  margin-top:10px;
+  @extend .clearfix;
+  .logo{
+        margin:0 auto;
+        width:280px;
+        height:106px;
+        background-image:url("../images/logo.png");
+    }
+}
+.bot{
+  width:1200px;
+  margin:20px auto;
+  .logo{
+    float:left;
+    width:127px;
+    height:194px;
+    background-image:url("../images/logo2.png");
+  }
+  .links{
+    float:left;
+    width:750px;
+    margin-left:50px;
+    .item{
+      width:150px;
+      float:left;
+      height:200px;
+      .title{
+        width:120px;
+        height:30px;
+        line-height:30px;
+        color:#a42a43;
+        font-size:24px;
+        border-bottom:3px solid #a42a43;
+      }
+      a{
+        height:27px;
+        line-height:27px;
+        display:block;
+        color:#a42a43;
+        font-size:20px;
+        &:hover{
+          color:#f394aa;
+        }
+      }
+    }
+  }
+  .code{
+    float:right;
+    width:235px;
+    img{
+      display:block;
+      width:150px;
+      height:150px;
+      margin:0 auto;
+    }
+    .txt{
+      font-size:14px;
+      color:#a42a43;
+    }
+  }
+}

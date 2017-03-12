@@ -1,7 +1,19 @@
 @import "common";
+@import "common/swiper";
+.swiper-container{
+	width:100%;
+	height:100%;
+	a,img{
+		width:100%;
+		height:100%;
+	}
+	
+}
 .container{
 	width:1200px;
+	height:auto;
 	margin:0 auto;
+
 	.item{
 		float:left;
 		.title{
@@ -45,8 +57,6 @@
 			.slider{
 				height:265px;
 				width:100%;
-				background-image: url("../images/case.png");
-				@include bcImg();
 			}
 			.cases{
 				height:182px;
@@ -57,26 +67,121 @@
 					height:48%;
 					margin:1%;
 					height:100px;
-					background-image: url("../images/case.png");
-					@include bcImg();
 				}
 			}
 		}
 	}
 	.news{
 		.content{
+			color:#a42a43;
+			line-height:24px;
+			font-size:20px;
 			.img-txt{
 				width:100%;
-				.img{
-
+				height:265px;
+				img{
+					height:100%;
+					width:60%;
+					float:left;
 				}
 				.txt{
-
+					height:100%;
+					width:36%;
+					float:right;
 				}
 			}
-			.txt{
+			.txt-container{
+				width:100%;
+				height:200px;
+				margin-top:5px;
+				border-top:2px dashed #f394aa;
+				position:relative;
 				.item{
-
+					position:relative;
+					padding-left:25px;
+					&:before{
+						display:block;
+						width:20px;
+						height:20px;
+						position:absolute;
+						left:0;
+						top:10px;
+						content:'';
+						border-radius:10px;
+						background-color:#f394aa;
+					}
+					color:#a42a43;
+					line-height:40px;
+					width:100%;
+					&:hover{
+				      color:#f394aa;
+				    }
+				}
+				.more{
+					line-height:40px;
+					color:#a42a43;
+					position:absolute;
+					bottom:0;
+					right:0;
+					&:hover{
+				      color:#f394aa;
+				    }
+				}
+			}
+		}
+	}
+	.advisory{
+		.content{
+			.list{
+				width:100%;
+				.item{
+					margin-bottom:20px;
+					width:100%;
+					.icon{
+						float:left;
+						width:66px;
+						height:66px;
+					}
+					.txt{
+						text-align:left;
+						color:#7dbdcd;
+						width:260px;
+						font-size:22px;
+						float:right;
+						line-height:33px;
+					}
+				}
+			}
+			.buttons{
+				width:100%;
+				.button{
+					height:52px;
+					line-height:52px;
+					font-size:24px;
+					background-color:#7dbdcd;
+					text-align: center;
+					img{
+						float:left;
+						margin-top:4px;
+					}
+					.text{
+						float:left;
+						line-height:52px;
+					}
+				}
+				.button1{
+					float:left;
+					width:48%;
+				}
+				.button2{
+					float:right;
+					width:48%;
+				}
+				.button3{
+					margin-top:20px;
+					float:left;
+					width:100%;
+					background-color:#f394aa;
 				}
 			}
 		}
