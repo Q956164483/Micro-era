@@ -291,6 +291,7 @@ a{
     }
 }
 .bot{
+  @extend .clearfix;
   width:1200px;
   margin:20px auto;
   .logo{
@@ -339,6 +340,24 @@ a{
     .txt{
       font-size:14px;
       color:#a42a43;
+    }
+  }
+}
+.footer{
+  //@extend .clearfix;
+  width:100%;
+  padding-top:30px;
+  padding-bottom:30px;
+  background-color:#64b3c9;
+  a{
+    max-width:1200px;
+    font-size:22px;
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    color:#a42a43;
+    &:hover{
+      color:#f394aa;
     }
   }
 }
