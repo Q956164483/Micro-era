@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after {
+.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo {
+.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot {
   *zoom: 1; }
 
 /**/
@@ -704,6 +704,21 @@ a {
     .bot .code .txt {
       font-size: 14px;
       color: #a42a43; }
+
+.footer {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #64b3c9; }
+  .footer a {
+    max-width: 1200px;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #a42a43; }
+    .footer a:hover {
+      color: #f394aa; }
 
 /**
  * Swiper 3.4.1
