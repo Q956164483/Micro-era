@@ -403,12 +403,6 @@ template {
 [hidden] {
   display: none; }
 
-@mixins ellipsis() {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
 .clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
   content: ".";
   /**/
