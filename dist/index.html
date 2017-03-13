@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=0.1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
     <title>微时代</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -31,7 +33,7 @@
                 <div class="arrow-bot"></div>
             </div>
             <div class="right">
-                <a class="nav-item act" href="javascript:">首页</a>
+                <a class="nav-item act" href="index.html">首页</a>
                 <a class="nav-item" href="about.html">关于我们<a>
                 <a class="nav-item" href="recommend.html">推荐项目<a>
                 <a class="nav-item" href="case.html">求美案例<a>
@@ -440,10 +442,6 @@
 		autoplay: 5000,//可选选项，自动滑动
 		pagination : '.swiper-pagination',
 	})
-	$('.service .left .item').on('click',function(){
-		var index = $(this).index();
-		$('.service .left .item').removeClass('act').eq(index).addClass('act');
-		$('.service .right .right-item').addClass('hide').eq(index).removeClass('hide');
-	})
+	
 </script>
 </html>

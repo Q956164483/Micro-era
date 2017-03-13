@@ -1,0 +1,53 @@
+@import "common";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	.list{
+		width:1200px;
+		.item{
+			.title{
+				width:1200px;
+				height:38px;
+				background-color:#64b3c9;
+				padding-top:28px;
+				padding-bottom:28px;
+				img{
+					display:block;
+					margin:0 auto;
+				}
+			}
+			.content{
+				@extend .clearfix;
+				width:1200px;
+				background-color:#f394aa;
+				img{
+					float:left;
+					width:222px;
+					height:124px;
+					margin:5px 9px;
+				}
+			}
+			.more{
+				width:88px;
+				height:20px;
+				border-radius:20px;
+				border:2px solid;
+				border-color:#64b3c9;
+				background-color:#f394aa;
+				text-align:center;
+				line-height:20px;
+				font-size:16px;
+				&:hover{
+					background-color:#64b3c9;
+					border-color:#f394aa;
+				}
+			}
+		}
+	}
+	.more{
+		display:block;
+		margin:20px auto;
+		width:61px;
+	}
+}

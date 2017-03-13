@@ -8,6 +8,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
  /**
  * 首页服务点击
  */
+$(document).ready(function(){
+    $('.service .left .item').on('click',function(){
+		var index = $(this).index();
+		$('.service .left .item').removeClass('act').eq(index).addClass('act');
+		$('.service .right .right-item').addClass('hide').eq(index).removeClass('hide');
+	})
+})
 
 /**
  * Swiper 3.4.1
