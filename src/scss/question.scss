@@ -1,0 +1,32 @@
+@import "common";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	.title{
+		font-size:24px;
+		color:#a42a43;
+		text-align:center;
+		padding-top:20px;
+	}
+	.list{
+		width:1200px;
+		padding-bottom:20px;
+		.item{
+			width:1180px;
+			padding:10px;
+			margin-top:20px;
+			background-color:#ffdde5;
+			line-height:30px;
+			color:#a42a43;
+			font-size:16px;
+			.question{
+				font-size:16px;
+			}
+			.answer{
+				padding-top:10px;
+
+			}
+		}
+	}
+}

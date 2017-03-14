@@ -1,0 +1,40 @@
+@import "common";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	.content{
+		width:1200px;
+
+		background-color:#64b3c9;
+		.title{
+			font-size:32px;
+			text-align:center;
+			color:#a42a43;
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		img{
+			width:100%;
+		}
+		.share{
+			padding-top:20px;
+			padding-bottom:20px;
+			.title1,.bdsharebuttonbox{
+				margin-left:2%;
+				width:83%;
+				float:left;
+			}
+			.bdsharebuttonbox{
+				width:13%
+			}
+		}
+		.detail{
+			width:1180px;
+			padding:10px;
+			line-height:20px;
+		}
+	}
+	
+	
+}

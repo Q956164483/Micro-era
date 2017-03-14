@@ -543,6 +543,7 @@ a {
 
 .top-banner {
   width: 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -652,6 +653,7 @@ a {
 /*尾部*/
 .service-process, .welcome {
   width: 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -780,9 +782,48 @@ a {
       color: #f394aa; }
 
 .container {
-  width: 100%;
-  height: 655px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block; }
+  width: 1200px;
+  height: auto;
+  margin: 0 auto; }
+  .container .list {
+    width: 1200px; }
+    .container .list .item {
+      width: 1200px;
+      margin-top: 30px;
+      display: block; }
+      .container .list .item:hover {
+        color: #f394aa; }
+      .container .list .item .banner {
+        width: 1200px;
+        height: 292px;
+        display: block; }
+      .container .list .item .line {
+        background-color: #64b3c9;
+        line-height: 60px;
+        font-size: 20px;
+        width: 100%;
+        height: 60px; }
+        .container .list .item .line div {
+          float: left;
+          width: 39%;
+          margin-left: 2%;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .container .list .item .line .more {
+          text-align: right;
+          width: 16%; }
+  .container ul {
+    margin: 0 auto;
+    list-style-type: none;
+    display: block;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .container ul li {
+      display: inline-block; }
+      .container ul li a {
+        color: #f394aa; }
+        .container ul li a:hover, .container ul li a.act {
+          color: #64b3c9; }

@@ -543,6 +543,7 @@ a {
 
 .top-banner {
   width: 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -652,6 +653,7 @@ a {
 /*尾部*/
 .service-process, .welcome {
   width: 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -780,9 +782,30 @@ a {
       color: #f394aa; }
 
 .container {
-  width: 100%;
-  height: 655px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block; }
+  width: 1200px;
+  height: auto;
+  margin: 0 auto; }
+  .container .content {
+    width: 1200px;
+    background-color: #64b3c9; }
+    .container .content .title {
+      font-size: 32px;
+      text-align: center;
+      color: #a42a43;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .container .content img {
+      width: 100%; }
+    .container .content .share {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .container .content .share .title1, .container .content .share .bdsharebuttonbox {
+        margin-left: 2%;
+        width: 83%;
+        float: left; }
+      .container .content .share .bdsharebuttonbox {
+        width: 13%; }
+    .container .content .detail {
+      width: 1180px;
+      padding: 10px;
+      line-height: 20px; }

@@ -14,6 +14,18 @@ $(document).ready(function(){
 		$('.service .left .item').removeClass('act').eq(index).addClass('act');
 		$('.service .right .right-item').addClass('hide').eq(index).removeClass('hide');
 	})
+    $(window).on('scroll',function(){
+        var scrollTop = $(this).scrollTop();
+        //console.log(scrollTop);
+        if(scrollTop>300){
+            $('.backtop').fadeIn(300);
+        }else{
+            $('.backtop').fadeOut(300);
+        }
+    })
+    $('.backtop').on('click',function(){
+        $("html,body").animate({scrollTop: '0px'},800)
+    })
 })
 function IsPC() {
     var userAgentInfo = navigator.userAgent;
