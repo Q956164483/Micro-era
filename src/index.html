@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<div class="rightFloat">
+	<div class="item">
+		
+	</div>
+</div>
 <div class="header">
     <div class="top-bg">
         <div class="top">
@@ -315,11 +320,12 @@
 				</div>
 			</div>
 			<div class="buttons">
-				<a class="button1 button" href="javascript:">
+				<a id="talk-qq" class="button1 button " href="javascript:">
 					<img src="images/icon-qq1.png" alt="">
 					<div class="text">QQ咨询</div>
 				</a>
-				<a class="button2 button" href="javascript:">
+				<a id="talk-wx" class="button2 button" href="javascript:">
+					<img src="images/code.png" alt="" class="code">
 					<img src="images/icon-zixun.png" alt="">
 					<div class="text"sss>在线咨询</div>
 				</a>
@@ -331,7 +337,7 @@
 	</div>
 </div>
 <div class="service-process">
-	<a href="#" class="more">了解更多</a>
+	<a href="process.html" class="more">了解更多</a>
 </div>
 <div class="welcome"></div>
 <div class="zanshi-bg">
@@ -436,7 +442,11 @@
 <script src="js/concat.js"></script>
 <script>
     $(document).ready(function(){
-	  
+      var url = "mqqwpa://im/chat?chat_type=wpa&uin=956164483&version=1&src_type=web";
+	  if(IsPC()){
+ 		url = "tencent://Message/?Uin=956164483&websiteName=www.oicqzone.com&Menu=yes";
+	  }
+	  $('#talk-qq').attr('href',url);
 	})
 	var mySwiper = new Swiper('.swiper-container', {
 		autoplay: 5000,//可选选项，自动滑动

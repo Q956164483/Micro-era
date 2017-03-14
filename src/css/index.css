@@ -442,6 +442,13 @@ a {
 .hide {
   display: none; }
 
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+  .swiper-container a, .swiper-container img {
+    width: 100%;
+    height: 100%; }
+
 .header {
   width: 100%;
   height: auto; }
@@ -1217,13 +1224,6 @@ button.swiper-pagination-bullet {
   100% {
     transform: rotate(360deg); } }
 
-.swiper-container {
-  width: 100%;
-  height: 100%; }
-  .swiper-container a, .swiper-container img {
-    width: 100%;
-    height: 100%; }
-
 .container {
   width: 1200px;
   height: auto;
@@ -1352,7 +1352,17 @@ button.swiper-pagination-bullet {
       width: 48%; }
     .container .advisory .content .buttons .button2 {
       float: right;
-      width: 48%; }
+      width: 48%;
+      position: relative; }
+      .container .advisory .content .buttons .button2 .code {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 52px;
+        display: none;
+        box-shadow: 0 0 20px #000; }
+      .container .advisory .content .buttons .button2:hover .code {
+        display: block; }
     .container .advisory .content .buttons .button3 {
       margin-top: 20px;
       float: left;

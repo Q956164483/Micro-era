@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
+.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .content:after, .container .content .right .zhuanti-list .title:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot {
+.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .content, .container .content .right .zhuanti-list .title {
   *zoom: 1; }
 
 /**/
@@ -1157,144 +1157,65 @@ button.swiper-pagination-bullet {
 .container {
   width: 1200px;
   height: auto;
-  margin: 0 auto; }
-  .container .item {
-    float: left; }
-    .container .item .title {
-      height: 47px;
-      color: #a42a43; }
-      .container .item .title .left {
-        border-bottom: 3px solid #a42a43; }
-      .container .item .title div {
-        font-size: 26px;
-        line-height: 47px;
-        float: left; }
-    .container .item .content {
-      margin-top: 15px;
-      width: 100%;
-      height: 243px; }
-  .container .item-left {
-    width: 356px; }
-  .container .item-center {
-    width: 458px;
-    margin-left: 25px;
-    margin-right: 25px; }
-  .container .item-right {
-    width: 336px; }
-  .container .about .content {
-    background-color: #000; }
-    .container .about .content video {
-      width: 100%;
-      height: 100%; }
-  .container .cases .content {
-    height: 447px; }
-    .container .cases .content .slider {
-      height: 265px;
-      width: 100%; }
-    .container .cases .content .cases {
-      height: 182px;
-      margin: 0; }
-      .container .cases .content .cases .item {
-        float: left;
-        width: 48%;
-        height: 48%;
-        margin: 1%;
-        height: 100px; }
-  .container .news .content {
-    color: #a42a43;
-    line-height: 24px;
-    font-size: 20px; }
-    .container .news .content .img-txt {
-      width: 100%;
-      height: 265px; }
-      .container .news .content .img-txt img {
-        height: 100%;
-        width: 60%;
-        float: left; }
-      .container .news .content .img-txt .txt {
-        height: 100%;
-        width: 36%;
-        float: right; }
-    .container .news .content .txt-container {
-      width: 100%;
-      height: 200px;
-      margin-top: 5px;
-      border-top: 2px dashed #f394aa;
-      position: relative; }
-      .container .news .content .txt-container .item {
-        position: relative;
-        padding-left: 25px;
-        color: #a42a43;
-        line-height: 40px;
-        width: 100%; }
-        .container .news .content .txt-container .item:before {
-          display: block;
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          left: 0;
-          top: 10px;
-          content: '';
-          border-radius: 10px;
-          background-color: #f394aa; }
-        .container .news .content .txt-container .item:hover {
-          color: #f394aa; }
-      .container .news .content .txt-container .more {
-        line-height: 40px;
-        color: #a42a43;
-        position: absolute;
-        bottom: 0;
-        right: 0; }
-        .container .news .content .txt-container .more:hover {
-          color: #f394aa; }
-  .container .advisory .content .list {
-    width: 100%; }
-    .container .advisory .content .list .item {
-      margin-bottom: 20px;
-      width: 100%; }
-      .container .advisory .content .list .item .icon {
-        float: left;
-        width: 66px;
-        height: 66px; }
-      .container .advisory .content .list .item .txt {
-        text-align: left;
-        color: #7dbdcd;
-        width: 260px;
-        font-size: 22px;
-        float: right;
-        line-height: 33px; }
-  .container .advisory .content .buttons {
-    width: 100%; }
-    .container .advisory .content .buttons .button {
-      height: 52px;
-      line-height: 52px;
-      font-size: 24px;
-      background-color: #7dbdcd;
-      text-align: center; }
-      .container .advisory .content .buttons .button img {
-        float: left;
-        margin-top: 4px; }
-      .container .advisory .content .buttons .button .text {
-        float: left;
-        line-height: 52px; }
-    .container .advisory .content .buttons .button1 {
+  margin: 0 auto;
+  color: #a42a43; }
+  .container .title {
+    font-size: 24px;
+    text-align: center; }
+  .container .share .bdsharebuttonbox {
+    margin-left: 20%; }
+  .container .content {
+    width: 1200px; }
+    .container .content .left {
       float: left;
-      width: 48%; }
-    .container .advisory .content .buttons .button2 {
+      width: 800px;
+      margin-left: 30px;
+      text-indent: 2em; }
+    .container .content .right {
       float: right;
-      width: 48%;
-      position: relative; }
-      .container .advisory .content .buttons .button2 .code {
-        position: absolute;
+      width: 350px; }
+      .container .content .right .slider {
+        width: 350px;
+        height: 350px; }
+      .container .content .right .zhuanti-list {
+        margin-top: 10px;
         width: 100%;
-        left: 0;
-        bottom: 52px;
-        display: none;
-        box-shadow: 0 0 20px #000; }
-      .container .advisory .content .buttons .button2:hover .code {
-        display: block; }
-    .container .advisory .content .buttons .button3 {
-      margin-top: 20px;
-      float: left;
-      width: 100%;
-      background-color: #f394aa; }
+        font-size: 16px; }
+        .container .content .right .zhuanti-list .title {
+          font-size: 16px; }
+          .container .content .right .zhuanti-list .title .text {
+            width: 80px;
+            float: left;
+            color: #999;
+            line-height: 30px;
+            border-bottom: 2px solid; }
+          .container .content .right .zhuanti-list .title .more {
+            color: #999;
+            float: right;
+            width: 90px;
+            line-height: 30px; }
+            .container .content .right .zhuanti-list .title .more:hover {
+              color: #f394aa; }
+        .container .content .right .zhuanti-list .content {
+          width: 100%; }
+          .container .content .right .zhuanti-list .content .item {
+            width: 350px;
+            height: 50px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #999;
+            display: block; }
+            .container .content .right .zhuanti-list .content .item:hover {
+              color: #f394aa; }
+            .container .content .right .zhuanti-list .content .item img {
+              width: 50px;
+              height: 50px;
+              display: block;
+              float: left;
+              margin-left: 5px; }
+            .container .content .right .zhuanti-list .content .item .txt {
+              float: right;
+              width: 280px;
+              height: 50px;
+              line-height: 25px;
+              overflow: hidden; }

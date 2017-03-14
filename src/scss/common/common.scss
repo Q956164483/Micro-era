@@ -1,6 +1,6 @@
-@import "common/reset";
-@import "common/mixins";
-@import "common/color";
+@import "reset";
+@import "mixins";
+@import "color";
 .clearfix:after{
   content: ".";     /**//*内容为“.”就是一个英文的句号而已。也可以不写。*/
   display: block;   /**//*加入的这个元素转换为块级元素。*/
@@ -14,7 +14,7 @@
 
 html,body{
   color:#FFF;
-  min-width:1200px;
+  width:100%;
 }
 a{
   text-decoration: none;
@@ -23,18 +23,8 @@ a{
 .hide{
   display:none;
 }
-.swiper-container{
-  width:100%;
-  height:100%;
-  a,img{
-    width:100%;
-    height:100%;
-  }
-  
-}
 .header{
   width:100%;
-  height:auto;
 }
 /*头部*/
 .top-bg{
@@ -44,12 +34,11 @@ a{
   .top{
   	width:1200px;
   	margin:0 auto;
-    height:auto;
   	.logo{
         margin-top:5px;
         width:280px;
         height:106px;
-  		  background-image:url("../images/logo.png");
+  		background-image:url("../images/logo.png");
         float:left;
   	}
     .right{
@@ -90,9 +79,11 @@ a{
   @include bcImg();
   &.top-banner1{
     height:634px;
+    background-image: url("../images/banner1.png");
   }
   &.top-banner2{
     height:166px;
+    background-image: url("../images/banner2.png");
   }
 }
 .nav-bg{
@@ -193,9 +184,10 @@ a{
           width:153px;
           height:110px;
           border-right:1px solid #85d2e8;
-          //border-left:1px solid #4d8fa2;
+          border-left:1px solid #4d8fa2;
           float:left;
           .icon{
+            display:block;
             width:80px;
             height:80px;
             margin:0 auto;
@@ -206,167 +198,16 @@ a{
             font-size:18px;
             text-align:center;
           }
-          
         }
       }
     }
   }
 }
 /*尾部*/
-.service-process,.welcome{
-  width:100%;
-  @extend .clearfix;
-  @include bcImg();
-  clear:both;
-}
-
 .service-process{
-  position:relative;
+  width:100%;
   height:419px;
+  @extend .clearfix();
   background-image: url("../images/service-process.png");
-  .more{
-    border:2px solid;
-    width:100px;
-    font-size:22px;
-    padding:5px;
-    border-radius:27px;
-    position:absolute;
-    text-align:center;
-    left:50%;
-    margin-left:-50px;
-    bottom:20px;
-    &:hover{
-      color:#f394aa;
-    }
-  }
 }
-.welcome{
-  height:110px;
-  background-image: url("../images/welcome.png");
-}
-.zanshi-bg{
-  width:100%;
-  margin-top:30px;
-  @extend .clearfix;
-  .zanshi{
-    margin:0 auto;
-    width:1200px;
-    .item{
-      width:590px;
-      .title{
-          background-color:$color-nav-act;
-          height:72px;
-          line-height:72px;
-          text-align:center;
-          font-size:26px;
-      }
-      .content{
-        width:100%;
-        height:200px;
-        margin-top:20px;
-        .item{
-          width:48%;
-          height:180px;
-          float:left;
-          margin:10px 1%;
-        }
-      }
-    }
-    .left{
-      .title{
 
-      }
-      float:left;
-    }
-    .right{
-      float:right;
-      .title{
-        background-color:$color-nav;
-      }
-    }
-  }
-}
-.bot-logo{
-  width:100%;
-  height:106px;
-  background-color:#f394aa;
-  margin-top:10px;
-  @extend .clearfix;
-  .logo{
-        margin:0 auto;
-        width:280px;
-        height:106px;
-        background-image:url("../images/logo.png");
-    }
-}
-.bot{
-  @extend .clearfix;
-  width:1200px;
-  margin:20px auto;
-  .logo{
-    float:left;
-    width:127px;
-    height:194px;
-    background-image:url("../images/logo2.png");
-  }
-  .links{
-    float:left;
-    width:750px;
-    margin-left:50px;
-    .item{
-      width:150px;
-      float:left;
-      height:200px;
-      .title{
-        width:120px;
-        height:30px;
-        line-height:30px;
-        color:#a42a43;
-        font-size:24px;
-        border-bottom:3px solid #a42a43;
-      }
-      a{
-        height:27px;
-        line-height:27px;
-        display:block;
-        color:#a42a43;
-        font-size:20px;
-        &:hover{
-          color:#f394aa;
-        }
-      }
-    }
-  }
-  .code{
-    float:right;
-    width:235px;
-    img{
-      display:block;
-      width:150px;
-      height:150px;
-      margin:0 auto;
-    }
-    .txt{
-      font-size:14px;
-      color:#a42a43;
-    }
-  }
-}
-.footer{
-  //@extend .clearfix;
-  width:100%;
-  padding-top:30px;
-  padding-bottom:30px;
-  background-color:#64b3c9;
-  a{
-    max-width:1200px;
-    font-size:22px;
-    display:block;
-    text-align:center;
-    margin:0 auto;
-    color:#a42a43;
-    &:hover{
-      color:#f394aa;
-    }
-  }
-}

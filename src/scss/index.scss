@@ -1,14 +1,5 @@
 @import "common";
 @import "common/swiper";
-.swiper-container{
-	width:100%;
-	height:100%;
-	a,img{
-		width:100%;
-		height:100%;
-	}
-	
-}
 .container{
 	width:1200px;
 	height:auto;
@@ -181,6 +172,21 @@
 				.button2{
 					float:right;
 					width:48%;
+					position:relative;
+					.code{
+						position:absolute;
+						width:100%;
+						left:0;
+						bottom:52px;
+						display:none;
+						box-shadow:0 0 20px #000;
+					}
+					&:hover{
+						.code{
+							display:block;
+						}
+					}
+					
 				}
 				.button3{
 					margin-top:20px;
