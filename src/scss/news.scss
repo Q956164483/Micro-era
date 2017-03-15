@@ -1,0 +1,58 @@
+@import "common";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	.list{
+		width:1200px;
+		.item{
+			display:block;
+			width:1190px;
+			padding-right:10px;
+			margin-top:30px;
+			font-size:18px;
+			line-height:65px;
+			color:#a42a43;
+			height:130px;
+			background-color:#f394aa;
+			img{
+				display:block;
+				width:330px;
+				height:130px;
+				float:left;
+			}		
+			.text{
+				float:left;
+				.title{
+					text-indent:1em;
+					@include ellipsis();
+				}
+				.content{
+					text-indent:1em;
+					@include ellipsis();
+				}
+			}
+			&:nth-child(2n){
+				background-color:#64b3c9;
+			}
+			
+		}
+	}
+	ul{
+		margin:0 auto;
+		list-style-type:none;
+		display:block;
+		width:250px;
+		padding-top:20px;
+		padding-bottom:20px;
+		li{
+			display:inline-block;
+			a{
+				color:#f394aa;
+				&:hover,&.act{
+					color:#64b3c9;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@import "common";
+@import "common/swiper";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	.list{
+		width:1200px;
+		.item{
+			.title{
+				width:1200px;
+				height:38px;
+				background-color:#64b3c9;
+				padding-top:28px;
+				padding-bottom:28px;
+				img{
+					display:block;
+					margin:0 auto;
+				}
+			}
+			.content{
+				@extend .clearfix;
+				width:100%;
+				padding-top:20px;
+				background-color:#f394aa;
+				padding-bottom:20px;
+				.slider{
+					margin:0 auto;
+					width:1118px;
+					height:125px;
+				}
+				.detail{
+					margin:20px auto;
+					width:1118px;
+					img{
+						display:block;
+						width:570px;
+						height:320px;
+						float:left;
+					}
+					.text{
+						float:right;
+						width:500px;
+						height:320px;
+						overflow-y:auto;
+						font-size:18px;
+						line-height:22px;
+						.name,.project{
+							line-height:30px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.fenlei{
+		padding-top:20px;
+		padding-bottom:20px;
+		width:1200px;
+		margin:20px auto;
+		background-color:#f394aa;
+		@extend .clearfix;
+		.item{
+			width:210px;
+			margin:0 45px;
+			cursor:pointer;
+			float:left;
+			.image{
+				border:1px solid #FFF;
+				width:208px;
+				height:110px;
+				display:block;
+			}
+			.txt{
+				display:block;
+				margin:20px auto;
+			}
+			&:hover,&.act{
+				.image{
+					border:1px solid #64b3c9;
+				}
+			}
+		}
+	}
+}

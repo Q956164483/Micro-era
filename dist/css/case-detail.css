@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .content:after, .container .content .right .zhuanti-list .title:after {
+.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .list .item .content:after, .container .fenlei:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .content, .container .content .right .zhuanti-list .title {
+.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .list .item .content, .container .fenlei {
   *zoom: 1; }
 
 /**/
@@ -1209,65 +1209,62 @@ button.swiper-pagination-bullet {
 .container {
   width: 1200px;
   height: auto;
-  margin: 0 auto;
-  color: #a42a43; }
-  .container .title {
-    font-size: 24px;
-    text-align: center; }
-  .container .share .bdsharebuttonbox {
-    margin-left: 20%; }
-  .container .content {
+  margin: 0 auto; }
+  .container .list {
     width: 1200px; }
-    .container .content .left {
-      float: left;
-      width: 800px;
-      margin-left: 30px;
-      text-indent: 2em; }
-    .container .content .right {
-      float: right;
-      width: 350px; }
-      .container .content .right .slider {
-        width: 350px;
-        height: 350px; }
-      .container .content .right .zhuanti-list {
-        margin-top: 10px;
-        width: 100%;
-        font-size: 16px; }
-        .container .content .right .zhuanti-list .title {
-          font-size: 16px; }
-          .container .content .right .zhuanti-list .title .text {
-            width: 80px;
-            float: left;
-            color: #999;
-            line-height: 30px;
-            border-bottom: 2px solid; }
-          .container .content .right .zhuanti-list .title .more {
-            color: #999;
-            float: right;
-            width: 90px;
+    .container .list .item .title {
+      width: 1200px;
+      height: 38px;
+      background-color: #64b3c9;
+      padding-top: 28px;
+      padding-bottom: 28px; }
+      .container .list .item .title img {
+        display: block;
+        margin: 0 auto; }
+    .container .list .item .content {
+      width: 100%;
+      padding-top: 20px;
+      background-color: #f394aa;
+      padding-bottom: 20px; }
+      .container .list .item .content .slider {
+        margin: 0 auto;
+        width: 1118px;
+        height: 125px; }
+      .container .list .item .content .detail {
+        margin: 20px auto;
+        width: 1118px; }
+        .container .list .item .content .detail img {
+          display: block;
+          width: 570px;
+          height: 320px;
+          float: left; }
+        .container .list .item .content .detail .text {
+          float: right;
+          width: 500px;
+          height: 320px;
+          overflow-y: auto;
+          font-size: 18px;
+          line-height: 22px; }
+          .container .list .item .content .detail .text .name, .container .list .item .content .detail .text .project {
             line-height: 30px; }
-            .container .content .right .zhuanti-list .title .more:hover {
-              color: #f394aa; }
-        .container .content .right .zhuanti-list .content {
-          width: 100%; }
-          .container .content .right .zhuanti-list .content .item {
-            width: 350px;
-            height: 50px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            color: #999;
-            display: block; }
-            .container .content .right .zhuanti-list .content .item:hover {
-              color: #f394aa; }
-            .container .content .right .zhuanti-list .content .item img {
-              width: 50px;
-              height: 50px;
-              display: block;
-              float: left;
-              margin-left: 5px; }
-            .container .content .right .zhuanti-list .content .item .txt {
-              float: right;
-              width: 280px;
-              height: 50px;
-              line-height: 25px;
-              overflow: hidden; }
+  .container .fenlei {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 1200px;
+    margin: 20px auto;
+    background-color: #f394aa; }
+    .container .fenlei .item {
+      width: 210px;
+      margin: 0 45px;
+      cursor: pointer;
+      float: left; }
+      .container .fenlei .item .image {
+        border: 1px solid #FFF;
+        width: 208px;
+        height: 110px;
+        display: block; }
+      .container .fenlei .item .txt {
+        display: block;
+        margin: 20px auto; }
+      .container .fenlei .item:hover .image, .container .fenlei .item.act .image {
+        border: 1px solid #64b3c9; }

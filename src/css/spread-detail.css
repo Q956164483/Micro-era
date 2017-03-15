@@ -623,6 +623,7 @@ a {
         .servive-bg .service .left .item.act, .servive-bg .service .left .item:hover {
           border-bottom: 2px solid #f394aa; }
     .servive-bg .service .right {
+      width: 1084px;
       float: right; }
       .servive-bg .service .right .right-item {
         height: 110px;
@@ -737,8 +738,7 @@ a {
     margin-left: 50px; }
     .bot .links .item {
       width: 150px;
-      float: left;
-      height: 200px; }
+      float: left; }
       .bot .links .item .title {
         width: 120px;
         height: 30px;

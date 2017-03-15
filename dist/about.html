@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-<img class="backtop hide" src="images/backtop.png" alt="">
 <div class="rightFloat">
 	<div class="item">
 		<img src="images/icon-dianhua1.png" alt="">
@@ -252,19 +251,54 @@
 			<img src="images/about-zanshi1.png" alt="" class="item">
 			<img src="images/about-zanshi2.png" alt="" class="item">
 			<img src="images/about-zanshi3.png" alt="" class="item">
+			<img src="images/arrow-top.png" alt="" class="arrow">
 		</div>
 		<div class="content">
-			<div class="item">
-				<img src="images/case.png" alt="">
-				<img src="images/case.png" alt="">
-			</div>
-			<div class="item">
-				<img src="images/case.png" alt="">
-				<img src="images/case.png" alt="">
-			</div>
-			<div class="item">
-				<img src="images/case.png" alt="">
-				<img src="images/case.png" alt="">
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			    	<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+			    </div>
+			    <div class="swiper-slide">
+			    	<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+			    </div>
+			    <div class="swiper-slide">
+			    	<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+					<div class="item">
+						<img src="images/case.png" alt="">
+						<img src="images/case.png" alt="">
+					</div>
+			    </div>
+			  </div>
 			</div>
 		</div>
 	</div>
@@ -348,7 +382,22 @@
 <script src="js/concat.js"></script>
 <script>
     $(document).ready(function(){
-	  
+	  //initSlider();
+	})
+	var mySwiper = new Swiper('.swiper-container',{
+		// nextButton: '.swiper-button-next',
+		// prevButton: '.swiper-button-prev',
+		// slidesPerView : 5 ,//'auto'
+		// spaceBetween : 5,
+		// //slidesPerView : 3.7,
+		onSlideChangeEnd: function(swiper){
+	      $('.arrow').css('left',swiper.activeIndex*420+'px');
+	    }
+	})
+	$('.zanshi .title .item').on('click',function(){
+		var index = $(this).index();
+		$('.arrow').css('left',index*420+'px');
+		mySwiper.slideTo(index, 666, false);
 	})
 	$('.adver-right img').mouseenter(function(){
 		var index = $(this).index();

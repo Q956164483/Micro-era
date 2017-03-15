@@ -1,4 +1,5 @@
 @import "common";
+@import "common/swiper";
 .container{
 	width:1200px;
 	height:auto;
@@ -64,6 +65,7 @@
 	overflow:hidden;
 	margin-bottom:20px;
 	.title{
+		position:relative;
 		width:1266px;
 		@extend .clearfix;
 		.item{
@@ -72,6 +74,13 @@
 			display:block;
 			float:left;
 			margin-right:66px;
+		}
+		.arrow{
+			display:block;
+			position:absolute;
+			bottom:-25px;
+			left:0;
+			@include transition(left .3s);
 		}
 	}
 	.content{

@@ -785,27 +785,49 @@ a {
   width: 1200px;
   height: auto;
   margin: 0 auto; }
-  .container .content {
-    width: 1200px;
-    background-color: #64b3c9; }
-    .container .content .title {
-      font-size: 32px;
-      text-align: center;
+  .container .list {
+    width: 1200px; }
+    .container .list .item {
+      display: block;
+      width: 1190px;
+      padding-right: 10px;
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 65px;
       color: #a42a43;
-      padding-top: 10px;
-      padding-bottom: 10px; }
-    .container .content img {
-      width: 100%; }
-    .container .content .share {
-      padding-top: 20px;
-      padding-bottom: 20px; }
-      .container .content .share .title1, .container .content .share .bdsharebuttonbox {
-        margin-left: 2%;
-        width: 83%;
+      height: 130px;
+      background-color: #f394aa; }
+      .container .list .item img {
+        display: block;
+        width: 330px;
+        height: 130px;
         float: left; }
-      .container .content .share .bdsharebuttonbox {
-        width: 13%; }
-    .container .content .detail {
-      width: 1180px;
-      padding: 10px;
-      line-height: 20px; }
+      .container .list .item .text {
+        float: left; }
+        .container .list .item .text .title {
+          text-indent: 1em;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .container .list .item .text .content {
+          text-indent: 1em;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+      .container .list .item:nth-child(2n) {
+        background-color: #64b3c9; }
+  .container ul {
+    margin: 0 auto;
+    list-style-type: none;
+    display: block;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .container ul li {
+      display: inline-block; }
+      .container ul li a {
+        color: #f394aa; }
+        .container ul li a:hover, .container ul li a.act {
+          color: #64b3c9; }
