@@ -89,5 +89,19 @@
 			}
 		}
 	}
+	.pages{
+		@extend .clearfix;
+		width:800px;
+		padding-top:50px;
+		padding-bottom:20px;
+		a{
+			display:block;
+			color:#a42a43;
+			text-align:center;
+			float:left;
+			width:33.33%;
+			@include ellipsis();
+		}
 
+	}
 }

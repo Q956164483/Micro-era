@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .content:after, .container .content .right .zhuanti-list .title:after {
+.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .content:after, .container .content .right .zhuanti-list .title:after, .container .pages:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .content, .container .content .right .zhuanti-list .title {
+.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .content, .container .content .right .zhuanti-list .title, .container .pages {
   *zoom: 1; }
 
 /**/
@@ -623,11 +623,10 @@ a {
           border-bottom: 2px solid #f394aa; }
     .servive-bg .service .right {
       width: 1084px;
-      float: right; }
+      float: right;
+      height: 210px;
+      overflow-y: auto; }
       .servive-bg .service .right .right-item {
-        height: 110px;
-        padding-top: 50px;
-        padding-bottom: 50px;
         position: relative; }
         .servive-bg .service .right .right-item .more {
           position: absolute;
@@ -638,6 +637,7 @@ a {
         .servive-bg .service .right .right-item .item {
           width: 153px;
           height: 110px;
+          margin-top: 50px;
           border-right: 1px solid #85d2e8;
           float: left; }
           .servive-bg .service .right .right-item .item .icon {
@@ -1271,3 +1271,17 @@ button.swiper-pagination-bullet {
               height: 50px;
               line-height: 25px;
               overflow: hidden; }
+  .container .pages {
+    width: 800px;
+    padding-top: 50px;
+    padding-bottom: 20px; }
+    .container .pages a {
+      display: block;
+      color: #a42a43;
+      text-align: center;
+      float: left;
+      width: 33.33%;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }

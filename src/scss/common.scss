@@ -240,10 +240,9 @@ a{
     .right{
       width:1084px;
       float:right;
+      height:210px;
+      overflow-y: auto;
       .right-item{
-        height:110px;
-        padding-top:50px;
-        padding-bottom:50px;
         position:relative;
         .more{
           position:absolute;
@@ -255,6 +254,7 @@ a{
         .item{
           width:153px;
           height:110px;
+          margin-top:50px;
           border-right:1px solid #85d2e8;
           //border-left:1px solid #4d8fa2;
           float:left;
