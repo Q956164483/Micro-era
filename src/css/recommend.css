@@ -609,9 +609,11 @@ a {
   .servive-bg .service {
     width: 1200px;
     margin: 0 auto;
-    height: 100%; }
+    height: 100%;
+    position: relative;
+    overflow-x: hidden; }
     .servive-bg .service .left {
-      width: 115px;
+      width: 109px;
       height: 100%;
       list-style: none;
       float: left;
@@ -628,7 +630,8 @@ a {
         .servive-bg .service .left .item.act, .servive-bg .service .left .item:hover {
           border-bottom: 2px solid #f394aa; }
     .servive-bg .service .right {
-      width: 1084px;
+      width: 1090px;
+      margin-right: -20px;
       float: right;
       height: 210px;
       overflow-y: auto; }
@@ -641,7 +644,7 @@ a {
           width: 60px;
           font-size: 14px; }
         .servive-bg .service .right .right-item .item {
-          width: 153px;
+          width: 152px;
           height: 110px;
           margin-top: 50px;
           border-right: 1px solid #85d2e8;

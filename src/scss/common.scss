@@ -219,8 +219,11 @@ a{
     width:1200px;
     margin:0 auto;
     height:100%;
+    position:relative;
+    overflow-x:hidden;
+    //border:1px solid red;
     .left{
-      width:115px;
+      width:109px;
       height:100%;
       list-style: none;
       float:left;
@@ -240,7 +243,9 @@ a{
       }
     }
     .right{
-      width:1084px;
+      width:1090px;
+      //border:1px solid red;
+      margin-right:-20px;
       float:right;
       height:210px;
       overflow-y: auto;
@@ -254,7 +259,7 @@ a{
           font-size:14px;
         }
         .item{
-          width:153px;
+          width:152px;
           height:110px;
           margin-top:50px;
           border-right:1px solid #85d2e8;
