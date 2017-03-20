@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .list .item .content:after {
+.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .list .item .content {
+.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot {
   *zoom: 1; }
 
 /**/
@@ -548,7 +548,6 @@ a {
 
 .top-banner {
   width: 100%;
-  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -659,7 +658,6 @@ a {
 /*尾部*/
 .service-process, .welcome {
   width: 100%;
-  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -789,40 +787,35 @@ a {
 .container {
   width: 1200px;
   height: auto;
-  margin: 0 auto; }
-  .container .list {
-    width: 1200px; }
-    .container .list .item .title {
-      width: 1200px;
-      height: 38px;
-      background-color: #64b3c9;
-      padding-top: 28px;
-      padding-bottom: 28px; }
-      .container .list .item .title img {
-        display: block;
-        margin: 0 auto; }
-    .container .list .item .content {
-      width: 1200px;
-      background-color: #f394aa; }
-      .container .list .item .content img {
-        float: left;
-        width: 222px;
-        height: 124px;
-        margin: 5px 9px; }
-    .container .list .item .more {
-      width: 88px;
-      height: 20px;
-      border-radius: 20px;
-      border: 2px solid;
-      border-color: #64b3c9;
-      background-color: #f394aa;
-      text-align: center;
-      line-height: 20px;
-      font-size: 16px; }
-      .container .list .item .more:hover {
-        background-color: #64b3c9;
-        border-color: #f394aa; }
-  .container .more {
+  margin: 0 auto;
+  overflow: hidden; }
+  .container .content {
+    width: 1180px;
+    padding: 10px;
+    background-color: #f394aa;
+    line-height: 22px; }
+    .container .content .title, .container .content .title1, .container .content .detail {
+      text-indent: 2em; }
+
+.imgs-bg {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #64b3c9;
+  position: relative; }
+
+.imgs {
+  width: 1236px;
+  margin: 0 auto;
+  position: relative;
+  left: 18px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .imgs img {
+    width: 210px;
+    height: 130px;
     display: block;
-    margin: 20px auto;
-    width: 61px; }
+    float: left;
+    margin-right: 37px; }

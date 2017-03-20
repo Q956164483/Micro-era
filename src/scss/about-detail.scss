@@ -1,0 +1,37 @@
+@import "common";
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	overflow:hidden;
+	.content{
+		width:1180px;
+		padding:10px;
+		background-color:#f394aa;
+		line-height:22px;
+		.title,.title1,.detail{
+			text-indent:2em;
+		}
+	}
+}
+.imgs-bg{
+	width:100%;
+	padding-top:15px;
+	padding-bottom:15px;
+	background-color:#64b3c9;
+	position:relative;
+}
+.imgs{
+	width:1236px;
+	margin:0 auto;
+	position:relative;
+	left:18px;
+	@include ellipsis();
+	img{
+		width:210px;
+		height:130px;
+		display:block;
+		float:left;
+		margin-right:37px;
+	}
+}

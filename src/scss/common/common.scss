@@ -29,16 +29,14 @@ a{
 /*头部*/
 .top-bg{
   width:100%;
-  height:115px;
   background-color: $color-top;
   .top{
   	width:1200px;
   	margin:0 auto;
   	.logo{
-        margin-top:5px;
+        display:block;
         width:280px;
         height:106px;
-  		background-image:url("../images/logo.png");
         float:left;
   	}
     .right{

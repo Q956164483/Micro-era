@@ -471,8 +471,8 @@ a {
     .rightFloat .item .detail {
       position: absolute;
       left: -320px;
-      width: 320px;
-      height: 320px;
+      width: 323px;
+      height: 323px;
       bottom: 0;
       background-color: #f394aa;
       display: none; }
@@ -493,6 +493,12 @@ a {
       border-left: 1px solid #FFF; }
       .rightFloat .item:hover .detail {
         display: block; }
+  .rightFloat .item3 .detail {
+    bottom: -81px; }
+  .rightFloat .item2 .detail {
+    bottom: -162px; }
+  .rightFloat .item1 .detail {
+    bottom: -243px; }
 
 .swiper-container {
   width: 100%;
@@ -508,14 +514,13 @@ a {
 /*头部*/
 .top-bg {
   width: 100%;
-  height: 115px;
+  height: 106px;
   background-color: #64b3c9; }
   .top-bg .top {
     width: 1200px;
     margin: 0 auto;
     height: auto; }
     .top-bg .top .logo {
-      margin-top: 5px;
       width: 280px;
       height: 106px;
       background-image: url("../images/logo.png");
@@ -1257,8 +1262,12 @@ button.swiper-pagination-bullet {
     line-height: 24px;
     font-size: 20px; }
     .container .news .content .img-txt {
+      display: block;
       width: 100%;
-      height: 265px; }
+      height: 265px;
+      color: #a42a43; }
+      .container .news .content .img-txt:hover {
+        color: #f394aa; }
       .container .news .content .img-txt img {
         height: 100%;
         width: 60%;

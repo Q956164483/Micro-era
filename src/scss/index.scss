@@ -73,8 +73,13 @@
 			line-height:24px;
 			font-size:20px;
 			.img-txt{
+				display:block;
 				width:100%;
 				height:265px;
+			    color: #a42a43;
+			    &:hover{
+			      color:#f394aa;
+			    }
 				img{
 					height:100%;
 					width:60%;
