@@ -806,7 +806,8 @@ a {
         background-color: #64b3c9;
         padding-top: 10px;
         padding-bottom: 10px;
-        cursor: pointer; }
+        cursor: pointer;
+        display: block; }
         .container .list .item .button:hover {
           background-color: #f394aa; }
         .container .list .item .button .btn {
