@@ -89,6 +89,17 @@
 					height:100%;
 					width:36%;
 					float:right;
+					a{
+						display:block;
+						color: #a42a43;
+						text-decoration:underline;
+						height:50px;
+						font-size:18px;
+						margin-top:8px;
+						margin-bottom:8px;
+						line-height:25px;
+						overflow:hidden;
+					}
 				}
 			}
 			.txt-container{
