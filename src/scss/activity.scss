@@ -39,12 +39,12 @@
 	ul{
 		margin:0 auto;
 		list-style-type:none;
-		display:block;
-		width:250px;
+		display:table;
 		padding-top:20px;
 		padding-bottom:20px;
 		li{
-			display:inline-block;
+			display:table-cell;
+			padding:0 8px 0 8px;
 			a{
 				color:#f394aa;
 				&:hover,&.act{

@@ -748,18 +748,18 @@ a {
       width: 150px;
       float: left; }
       .bot .links .item .title {
-        width: 120px;
+        width: 100px;
         height: 30px;
         line-height: 30px;
         color: #a42a43;
-        font-size: 24px;
+        font-size: 20px;
         border-bottom: 3px solid #a42a43; }
       .bot .links .item a {
         height: 27px;
         line-height: 27px;
         display: block;
         color: #a42a43;
-        font-size: 20px; }
+        font-size: 18px; }
         .bot .links .item a:hover {
           color: #f394aa; }
   .bot .code {

@@ -22,7 +22,12 @@
 			float:left;
 			width:800px;
 			margin-left:30px;
-			text-indent:2em;
+			p{
+				text-indent:2em;
+			}
+			img{
+				width:100%;
+			}
 		}
 		.right{
 			float:right;

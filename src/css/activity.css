@@ -748,18 +748,18 @@ a {
       width: 150px;
       float: left; }
       .bot .links .item .title {
-        width: 120px;
+        width: 100px;
         height: 30px;
         line-height: 30px;
         color: #a42a43;
-        font-size: 24px;
+        font-size: 20px;
         border-bottom: 3px solid #a42a43; }
       .bot .links .item a {
         height: 27px;
         line-height: 27px;
         display: block;
         color: #a42a43;
-        font-size: 20px; }
+        font-size: 18px; }
         .bot .links .item a:hover {
           color: #f394aa; }
   .bot .code {
@@ -825,12 +825,12 @@ a {
   .container ul {
     margin: 0 auto;
     list-style-type: none;
-    display: block;
-    width: 250px;
+    display: table;
     padding-top: 20px;
     padding-bottom: 20px; }
     .container ul li {
-      display: inline-block; }
+      display: table-cell;
+      padding: 0 8px 0 8px; }
       .container ul li a {
         color: #f394aa; }
         .container ul li a:hover, .container ul li a.act {

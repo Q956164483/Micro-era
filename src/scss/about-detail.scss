@@ -12,6 +12,12 @@
 		.title,.title1,.detail{
 			text-indent:2em;
 		}
+		img{
+			display:block;
+			margin:0 auto;
+			width:1180px;
+			height:auto;
+		}
 	}
 }
 .imgs-bg{
@@ -20,6 +26,7 @@
 	padding-bottom:15px;
 	background-color:#64b3c9;
 	position:relative;
+	overflow:hidden;
 }
 .imgs{
 	width:1236px;
