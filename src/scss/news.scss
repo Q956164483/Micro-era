@@ -1,4 +1,5 @@
 @import "common";
+@import "common/swiper";
 .container{
 	width:1200px;
 	height:auto;
@@ -20,7 +21,7 @@
 				width:330px;
 				height:130px;
 				float:left;
-			}		
+			}
 			.text{
 				float:left;
 				.title{
@@ -35,7 +36,7 @@
 			&:nth-child(2n){
 				background-color:#64b3c9;
 			}
-			
+
 		}
 	}
 	ul{

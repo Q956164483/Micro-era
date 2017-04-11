@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
+.clearfix:after, .top-bg .top .right .line1:after, .location-nav:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot {
+.clearfix, .top-bg .top .right .line1, .location-nav, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot {
   *zoom: 1; }
 
 /**/
@@ -434,6 +434,9 @@ template {
 html, body {
   color: #FFF;
   min-width: 1200px; }
+
+body {
+  zoom: 0.86; }
 
 a {
   text-decoration: none;
@@ -514,22 +517,25 @@ a {
 /*头部*/
 .top-bg {
   width: 100%;
-  height: 106px;
+  height: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #64b3c9; }
   .top-bg .top {
     width: 1200px;
     margin: 0 auto;
     height: auto; }
     .top-bg .top .logo {
-      width: 280px;
-      height: 106px;
-      background-image: url("../images/logo.png");
+      display: block;
       float: left; }
+      .top-bg .top .logo img {
+        width: 210px;
+        height: 80px; }
     .top-bg .top .right {
       float: right;
       width: 340px; }
       .top-bg .top .right .line {
-        margin-top: 20px; }
+        margin-top: 15px; }
         .top-bg .top .right .line .icon {
           width: 21px;
           height: 21px;
@@ -631,7 +637,7 @@ a {
           border-bottom: 2px solid #f394aa; }
     .servive-bg .service .right {
       width: 1090px;
-      margin-right: -20px;
+      margin-right: -22px;
       float: right;
       height: 210px;
       overflow-y: auto; }
@@ -658,6 +664,18 @@ a {
             line-height: 30px;
             font-size: 18px;
             text-align: center; }
+
+.location-nav {
+  width: 1200px;
+  margin: 0 auto; }
+  .location-nav a {
+    display: block;
+    float: left;
+    color: #a42a43;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .location-nav .location-item:hover {
+    color: #f394aa; }
 
 /*尾部*/
 .service-process, .welcome {
@@ -709,11 +727,15 @@ a {
         width: 100%;
         height: 200px;
         margin-top: 20px; }
-        .zanshi-bg .zanshi .item .content .item {
+        .zanshi-bg .zanshi .item .content a {
+          display: block;
           width: 48%;
           height: 180px;
           float: left;
           margin: 10px 1%; }
+        .zanshi-bg .zanshi .item .content .item {
+          width: 100%;
+          height: 100%; }
     .zanshi-bg .zanshi .left {
       float: left; }
     .zanshi-bg .zanshi .right {
@@ -723,14 +745,16 @@ a {
 
 .bot-logo {
   width: 100%;
-  height: 106px;
+  height: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #f394aa;
   margin-top: 10px; }
   .bot-logo .logo {
     margin: 0 auto;
-    width: 280px;
-    height: 106px;
-    background-image: url("../images/logo.png"); }
+    width: 210px;
+    height: 80px;
+    display: block; }
 
 .bot {
   width: 1200px;
@@ -1324,12 +1348,16 @@ button.swiper-pagination-bullet {
     .container .cases .content .cases {
       height: 182px;
       margin: 0; }
-      .container .cases .content .cases .item {
+      .container .cases .content .cases a {
+        display: block;
         float: left;
         width: 48%;
         height: 48%;
         margin: 1%;
         height: 100px; }
+      .container .cases .content .cases .item {
+        width: 100%;
+        height: 100%; }
   .container .news .content {
     color: #a42a43;
     line-height: 24px;
@@ -1339,8 +1367,6 @@ button.swiper-pagination-bullet {
       width: 100%;
       height: 265px;
       color: #a42a43; }
-      .container .news .content .img-txt:hover {
-        color: #f394aa; }
       .container .news .content .img-txt .img {
         display: block;
         height: 100%;
@@ -1362,6 +1388,8 @@ button.swiper-pagination-bullet {
           margin-bottom: 8px;
           line-height: 25px;
           overflow: hidden; }
+          .container .news .content .img-txt .txt a:hover {
+            color: #f394aa; }
     .container .news .content .txt-container {
       width: 100%;
       height: 200px;
@@ -1407,9 +1435,14 @@ button.swiper-pagination-bullet {
         text-align: left;
         color: #7dbdcd;
         width: 260px;
-        font-size: 22px;
+        font-size: 20px;
         float: right;
         line-height: 33px; }
+        .container .advisory .content .list .item .txt div {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
   .container .advisory .content .buttons {
     width: 100%; }
     .container .advisory .content .buttons .button {
@@ -1423,6 +1456,7 @@ button.swiper-pagination-bullet {
         margin-top: 4px; }
       .container .advisory .content .buttons .button .text {
         float: left;
+        font-size: 22px;
         line-height: 52px; }
     .container .advisory .content .buttons .button1 {
       float: left;

@@ -16,13 +16,16 @@ html,body{
   color:#FFF;
   min-width:1200px;
 }
+body{
+  zoom:0.86;
+}
 a{
   text-decoration: none;
   color:#FFF;
 }
 .hide{
   display:none;
-  
+
 }
 .backtop{
   width:81px;
@@ -73,7 +76,7 @@ a{
           padding:0;
         }
       }
-      
+
     }
     &:hover{
       background-color:#f394aa;
@@ -95,7 +98,7 @@ a{
     width:100%;
     height:100%;
   }
-  
+
 }
 .header{
   width:100%;
@@ -104,23 +107,27 @@ a{
 /*头部*/
 .top-bg{
   width:100%;
-  height:106px;
+  height:80px;
+  padding-top:5px;
+  padding-bottom:5px;
   background-color: $color-top;
   .top{
   	width:1200px;
   	margin:0 auto;
     height:auto;
   	.logo{
-        width:280px;
-        height:106px;
-  		  background-image:url("../images/logo.png");
+        display:block;
         float:left;
+        img{
+          width:210px;
+          height:80px;
+        }
   	}
     .right{
       float:right;
       width:340px;
       .line{
-        margin-top:20px;
+        margin-top:15px;
         .icon{
           width:21px;
           height:21px;
@@ -245,7 +252,7 @@ a{
     .right{
       width:1090px;
       //border:1px solid red;
-      margin-right:-20px;
+      margin-right:-22px;
       float:right;
       height:210px;
       overflow-y: auto;
@@ -276,10 +283,25 @@ a{
             font-size:18px;
             text-align:center;
           }
-          
+
         }
       }
     }
+  }
+}
+.location-nav{
+  width:1200px;
+  margin:0 auto;
+  @extend .clearfix;
+  a{
+    display:block;
+    float:left;
+    color: #a42a43;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .location-item:hover{
+    color:#f394aa;
   }
 }
 /*尾部*/
@@ -334,11 +356,16 @@ a{
         width:100%;
         height:200px;
         margin-top:20px;
-        .item{
+        a{
+          display:block;
           width:48%;
           height:180px;
           float:left;
           margin:10px 1%;
+        }
+        .item{
+          width:100%;
+          height:100%;
         }
       }
     }
@@ -358,15 +385,17 @@ a{
 }
 .bot-logo{
   width:100%;
-  height:106px;
+  height:80px;;
+  padding-top:5px;
+  padding-bottom:5px;
   background-color:#f394aa;
   margin-top:10px;
   @extend .clearfix;
   .logo{
         margin:0 auto;
-        width:280px;
-        height:106px;
-        background-image:url("../images/logo.png");
+        width:210px;
+        height:80px;
+        display:block;
     }
 }
 .bot{

@@ -71,7 +71,19 @@
             </div>
         </div>
     </div>
-    <div class="top-banner top-banner1" style="background-image: url(images/banner1.png)"></div>
+    <div class="swiper-container top-banner top-banner1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/banner1.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/banner1.png" alt="">
+        </div>
+      </div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+      <div class="swiper-pagination"></div>
+    </div>
     <div class="nav-bg">
         <div class="nav">
             <div class="left">
@@ -81,7 +93,7 @@
             <div class="right">
                 <a class="nav-item" href="index.html">首页</a>
                 <a class="nav-item" href="about.html">关于我们<a/>
-                <a class="nav-item" href="recommend.html">推荐项目<a/>
+                <a class="nav-item" href="recommend.html">专家团队<a/>
                 <a class="nav-item" href="case.html">求美案例<a/>
                 <a class="nav-item" href="process.html">服务流程<a/>
             </div>
@@ -97,7 +109,7 @@
 	        </div>
 	        <div class="right">
 	        	<div class="right-item">
-	        		
+
 		            <a class="item" href="#">
 		                <div class="icon icon-service1" style="background-image: url(images/icon-service1.png)"></div>
 		                <div class="text">鼻部美容</div>
@@ -128,7 +140,7 @@
 		            </a>
 	        	</div>
 	        	<div class="right-item hide">
-	        		
+
 		            <a class="item" href="#">
 		                <div class="icon icon-service1" style="background-image: url(images/icon-service1.png)"></div>
 		                <div class="text">鼻部美容2</div>
@@ -159,7 +171,7 @@
 		            </a>
 	        	</div>
 	        	<div class="right-item hide">
-	        		
+
 		            <a class="item" href="#">
 		                <div class="icon icon-service1" style="background-image: url(images/icon-service1.png)"></div>
 		                <div class="text">鼻部美容3</div>
@@ -190,7 +202,7 @@
 		            </a>
 	        	</div>
 	        	<div class="right-item hide">
-	        		
+
 		            <a class="item" href="#">
 		                <div class="icon icon-service1" style="background-image: url(images/icon-service1.png)"></div>
 		                <div class="text">鼻部美容4</div>
@@ -224,6 +236,12 @@
 	    </div>
     </div>
     <div class="top-banner top-banner2" style="background-image: url(images/spread-title.jpg)"></div>
+    <div class="location-nav">
+      <a href="javascript:;">当前位置：</a>
+      <a class="location-item" href="index.html">首页></a>
+      <a class="location-item" href="spread.html">你不知道的99件事></a>
+      <a class="location-item" href="#">详情</a>
+    </div>
 </div>
 
 <div class="container">
@@ -242,7 +260,7 @@
 		</div>
 		<div class="right">
 			<div class="slider">
-				<div class="swiper-container">
+				<div class="swiper-container content-swiper">
 				  <div class="swiper-wrapper">
 				    <div class="swiper-slide">
 				    	<a href="#">
@@ -318,13 +336,12 @@
 		<a href="#">下一条：冬珠夫妇首付了山东济南</a>
 	</div>
 </div>
-
 <div class="bot-logo">
-	<div class="logo"></div>
+  <img src="images/logo.png" alt="" class="logo">
 </div>
 <div class="bot">
 	<div class="logo">
-		
+
 	</div>
 	<div class="links">
 		<div class="item">
@@ -395,9 +412,17 @@
 <script src="js/concat.js"></script>
 <script>
     $(document).ready(function(){
-	  
+
 	})
-	var mySwiper = new Swiper('.swiper-container', {
+  var bannerSwiper = new Swiper('.top-banner1', {
+    autoplay : 3000,
+    speed:666,
+		pagination : '.swiper-pagination',
+    // prevButton:'.swiper-button-prev',
+    // nextButton:'.swiper-button-next',
+    paginationClickable :true,
+	})
+	var mySwiper = new Swiper('.content-swiper', {
 		autoplay: 5000,//可选选项，自动滑动
 		pagination : '.swiper-pagination',
 	})

@@ -403,7 +403,7 @@ template {
 [hidden] {
   display: none; }
 
-.clearfix:after, .top-bg .top .right .line1:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .list .item .content:after, .container .fenlei:after {
+.clearfix:after, .top-bg .top .right .line1:after, .location-nav:after, .service-process:after, .welcome:after, .zanshi-bg:after, .bot-logo:after, .bot:after, .container .list .item .content:after, .container .fenlei:after {
   content: ".";
   /**/
   /*内容为“.”就是一个英文的句号而已。也可以不写。*/
@@ -426,7 +426,7 @@ template {
   /**/
   /*字体大小为0；*/ }
 
-.clearfix, .top-bg .top .right .line1, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .list .item .content, .container .fenlei {
+.clearfix, .top-bg .top .right .line1, .location-nav, .service-process, .welcome, .zanshi-bg, .bot-logo, .bot, .container .list .item .content, .container .fenlei {
   *zoom: 1; }
 
 /**/
@@ -434,6 +434,9 @@ template {
 html, body {
   color: #FFF;
   min-width: 1200px; }
+
+body {
+  zoom: 0.86; }
 
 a {
   text-decoration: none;
@@ -514,22 +517,25 @@ a {
 /*头部*/
 .top-bg {
   width: 100%;
-  height: 106px;
+  height: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #64b3c9; }
   .top-bg .top {
     width: 1200px;
     margin: 0 auto;
     height: auto; }
     .top-bg .top .logo {
-      width: 280px;
-      height: 106px;
-      background-image: url("../images/logo.png");
+      display: block;
       float: left; }
+      .top-bg .top .logo img {
+        width: 210px;
+        height: 80px; }
     .top-bg .top .right {
       float: right;
       width: 340px; }
       .top-bg .top .right .line {
-        margin-top: 20px; }
+        margin-top: 15px; }
         .top-bg .top .right .line .icon {
           width: 21px;
           height: 21px;
@@ -630,7 +636,7 @@ a {
           border-bottom: 2px solid #f394aa; }
     .servive-bg .service .right {
       width: 1090px;
-      margin-right: -20px;
+      margin-right: -22px;
       float: right;
       height: 210px;
       overflow-y: auto; }
@@ -657,6 +663,18 @@ a {
             line-height: 30px;
             font-size: 18px;
             text-align: center; }
+
+.location-nav {
+  width: 1200px;
+  margin: 0 auto; }
+  .location-nav a {
+    display: block;
+    float: left;
+    color: #a42a43;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .location-nav .location-item:hover {
+    color: #f394aa; }
 
 /*尾部*/
 .service-process, .welcome {
@@ -707,11 +725,15 @@ a {
         width: 100%;
         height: 200px;
         margin-top: 20px; }
-        .zanshi-bg .zanshi .item .content .item {
+        .zanshi-bg .zanshi .item .content a {
+          display: block;
           width: 48%;
           height: 180px;
           float: left;
           margin: 10px 1%; }
+        .zanshi-bg .zanshi .item .content .item {
+          width: 100%;
+          height: 100%; }
     .zanshi-bg .zanshi .left {
       float: left; }
     .zanshi-bg .zanshi .right {
@@ -721,14 +743,16 @@ a {
 
 .bot-logo {
   width: 100%;
-  height: 106px;
+  height: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #f394aa;
   margin-top: 10px; }
   .bot-logo .logo {
     margin: 0 auto;
-    width: 280px;
-    height: 106px;
-    background-image: url("../images/logo.png"); }
+    width: 210px;
+    height: 80px;
+    display: block; }
 
 .bot {
   width: 1200px;

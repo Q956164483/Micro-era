@@ -4,6 +4,7 @@
  /**
  * 首页服务点击
  */
+ 
 $(document).ready(function(){
     $('.service .left .item').on('click',function(){
 		var index = $(this).index();
